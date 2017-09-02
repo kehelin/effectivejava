@@ -1,4 +1,4 @@
-package proxy;
+package pattern.proxy;
 
 /**
  * Created by wangminghui on 2017/3/11.

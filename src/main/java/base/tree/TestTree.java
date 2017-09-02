@@ -1,4 +1,4 @@
-package tree;
+package base.tree;
 
 /**
  * Created by wangminghui on 2017/3/7.

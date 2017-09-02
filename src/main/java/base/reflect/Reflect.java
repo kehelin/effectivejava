@@ -1,4 +1,4 @@
-package reflect;
+package base.reflect;
 
 import java.lang.reflect.Field;
 
@@ -9,7 +9,7 @@ public class Reflect {
     public static void main(String[] args) throws Exception {
         Model model = new Model();
         model.print();
-        Class<?> clazz = Class.forName("reflect.Model");
+        Class<?> clazz = Class.forName("base.reflect.Model");
         Field field = clazz.getDeclaredField("secret1");
         field.setAccessible(true);
         field.set(model,"newhaha");
