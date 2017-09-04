@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Arrays;
+
 /**
  * Created by xwz on 2017/6/1.
  Given an array of 2n integers, your task is to group these integers into n pairs of integer,
@@ -16,7 +18,7 @@ package leetcode;
  All the integers in the array will be in the range of [-10000, 10000].
  */
 public class Solution561 {
-    static int[] input = {1,4,3,2};
+    static int[] input = {7,3,1,0,0,6};
     public static void main(String[] args) {
         Solution561 solution = new Solution561();
         System.out.print(solution.arrayPairSum(input));
@@ -24,8 +26,8 @@ public class Solution561 {
     public int arrayPairSum(int[] nums) {
         quickSort(nums,0,nums.length-1);
         int result = 0;
-        for(int i = 0; i<nums.length/2;i++) {
-            result += nums[2*i];
+        for(int i = 0; i<nums.length;i+=2) {
+            result += nums[i];
         }
         return result;
     }
@@ -64,7 +66,7 @@ public class Solution561 {
 
     }
 
-    static void swap(int[] nums,int x, int y) {
+    private static void swap(int[] nums,int x, int y) {
         int temp = nums[x];
         nums[x] = nums[y];
         nums[y] = temp;
