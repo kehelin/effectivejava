@@ -19,35 +19,21 @@ import java.util.*;
 public class Solution442 {
     public static void main(String[] args) {
         int[] nums = {4,3,2,7,8,2,3,1};
-        for(Integer val :new Solution442().findDuplicates1(nums)){
+        for(Integer val :new Solution442().findDuplicates(nums)){
             System.out.println(val);
         }
     }
     public List<Integer> findDuplicates(int[] nums) {
-        Set<String> set = new HashSet<String>();
         List<Integer> result = new ArrayList<Integer>();
-        for(int val : nums) {
-            String valStr = String.valueOf(val);
-            if(set.contains(valStr)) {
-                result.add(val);
+        for(int i=0;i<nums.length;i++) {
+            int temp = Math.abs(nums[i])-1;
+            if(nums[temp]<0) {
+                result.add(Math.abs(nums[i]));
             }else {
-                set.add(valStr);
+                nums[temp] = -nums[temp];
             }
         }
         return result;
     }
 
-    public List<Integer> findDuplicates1(int[] nums) {
-        List<Integer> res = new ArrayList<Integer>();
-
-        for (int i = 0; i < nums.length; i++){
-            int idx = Math.abs(nums[i]) - 1;
-            if (nums[idx] < 0) {
-                res.add(Math.abs(nums[i]));
-            } else {
-                nums[idx] = - nums[idx];
-            }
-        }
-        return res;
-    }
 }
