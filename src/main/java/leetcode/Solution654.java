@@ -18,7 +18,7 @@ public class Solution654 {
 		if(num> node.val) {
 			TreeNode newNode = new TreeNode(num);
 			newNode.left = node;
-			return node;
+			return newNode;
 		}
 		if(node.right == null){
 			node.right = new TreeNode(num);
