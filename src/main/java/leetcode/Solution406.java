@@ -1,8 +1,5 @@
 package leetcode;
 
-import javafx.collections.transformation.SortedList;
-import javafx.util.Pair;
-
 import java.util.*;
 
 public class Solution406 {
