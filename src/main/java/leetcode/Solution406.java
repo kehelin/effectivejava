@@ -7,26 +7,20 @@ import java.util.*;
 
 public class Solution406 {
 	public int[][] reconstructQueue(int[][] people) {
-		Map<Integer,ArrayList<Integer>> map = new TreeMap<Integer, ArrayList<Integer>>(new Comparator<Integer>() {
-			public int compare(Integer o1, Integer o2) {
-				return o1.compareTo(o2);
+		Arrays.sort(people, new Comparator<int[]>() {
+			public int compare(int[] o1, int[] o2) {
+				if(o1[0] == o2[0]) {
+					return o1[1] - o2[1];
+				}else {
+					return o2[0] - o1[0];
+				}
 			}
 		});
-		for(int i = 0;i<people.length;i++) {
-			if(map.containsKey(people[i][0])) {
-				map.get(people[i][0]).add(people[i][1]);
-			}else {
-				list.add(people[i][1]);
-				map.put(people[i][0],list);
-			}
+		List<int[]> result = new LinkedList<int[]>();
+		for(int[] temp : people) {
+			result.add(temp[1],temp);
 		}
-		LinkedList<Map.Entry<Integer,Integer>> result = new LinkedList();
-		for(Integer i : map.keySet()) {
-			ArrayList<Integer> list = Arrays.sort(map.get(i));
-			for(Integer j : list) {
-
-			}
-		}
+		return result.toArray(new int[people.length][]);
 
 	}
 }
