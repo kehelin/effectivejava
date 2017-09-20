@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.backup;
 
 public class Solution647 {
     public static void main(String[] args){

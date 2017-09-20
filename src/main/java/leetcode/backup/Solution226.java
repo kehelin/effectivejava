@@ -1,4 +1,6 @@
-package leetcode;
+package leetcode.backup;
+
+import leetcode.base.TreeNode;
 
 public class Solution226 {
     public TreeNode invertTree(TreeNode root) {
