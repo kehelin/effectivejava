@@ -11,8 +11,23 @@ public class DataSouter {
 		}
 	}
 
+	public static void sort(Cat[] a) {
+		for(int i=a.length-1;i>0;i--) {
+			for(int j=0;j<i;j++){
+				if(a[j].getWeight() > a[j+1].getWeight()) {
+					swap(a,j,j+1);
+				}
+			}
+		}
+	}
+
 	private static void swap(int[] a,int i, int j) {
 		int temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
+	private static void swap(Cat[] a,int i, int j) {
+		Cat temp = a[i];
 		a[i] = a[j];
 		a[j] = temp;
 	}
