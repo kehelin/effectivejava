@@ -2,9 +2,12 @@ package pattern.strategy;
 
 import sun.tools.tree.InstanceOfExpression;
 
+import java.util.Comparator;
+
 public class Cat implements Comparable{
 	private int height;
 	private int weight;
+	private Comparator<Cat> comparator = new CatComparator();
 
 	public int getHeight() {
 		return height;
@@ -28,20 +31,17 @@ public class Cat implements Comparable{
 	}
 
 	@Override
-	public int comparteTo(Object o) {
-		if(o instanceof Cat) {
-			Cat c = (Cat)o;
-			if(this.getHeight() > c.getHeight()) {
-				return 1;
-			}else if(this.getHeight() < c.getHeight()) {
-				return -1;
-			}else {
-				return 0;
-			}
+	public int compareTo(Object o) {
+		Cat c = (Cat)o;
+		if(this.getHeight() > c.getHeight()) {
+			return 1;
+		}else if(this.getHeight() < c.getHeight()) {
+			return -1;
 		}else {
-			return -100;
+			return 0;
 		}
 	}
+
 
 	@Override
 	public String toString() {

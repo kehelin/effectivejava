@@ -21,7 +21,7 @@ public class DataSouter {
 			for(int j=0;j<i;j++){
 				Comparable o1 = (Comparable) a[j];
 				Comparable o2 = (Comparable) a[j+1];
-				if(o1.comparteTo(o2)>0) {
+				if(o1.compareTo(o2)>0) {
 					swap(a,j,j+1);
 				}
 			}

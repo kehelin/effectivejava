@@ -16,7 +16,7 @@ public class Dog implements Comparable{
 	}
 
 	@Override
-	public int comparteTo(Object o) {
+	public int compareTo(Object o) {
 		if(o instanceof Dog ){
 			Dog c = (Dog)o;
 			if(this.getFood() > c.getFood()) {
