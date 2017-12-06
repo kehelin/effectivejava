@@ -14,14 +14,11 @@ public class Account {
 	
 	public synchronized void set(String name, double balance) {
 		this.name = name;
-		/*
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		*/
-		
 		this.balance = balance;
 	}
 	
@@ -34,11 +31,11 @@ public class Account {
 		Account a = new Account();
 		new Thread(()->a.set("zhangsan", 100.0)).start();
 		
-		try {
-			TimeUnit.SECONDS.sleep(1);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			TimeUnit.SECONDS.sleep(1);
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
+//		}
 		
 		System.out.println(a.getBalance("zhangsan"));
 		
