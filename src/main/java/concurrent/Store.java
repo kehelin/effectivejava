@@ -10,4 +10,8 @@ public class Store {
     private final int MAXNUM = 100;
 
     Queue<String> list = new LinkedBlockingQueue<String>();
+
+    public static void mian(String[] args) {
+        
+    }
 }
