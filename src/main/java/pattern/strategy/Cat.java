@@ -1,7 +1,5 @@
 package pattern.strategy;
 
-import sun.tools.tree.InstanceOfExpression;
-
 import java.util.Comparator;
 
 public class Cat implements Comparable{
