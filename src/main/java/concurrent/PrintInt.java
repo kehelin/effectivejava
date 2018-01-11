@@ -20,21 +20,18 @@ public class PrintInt {
 		new Thread(() -> {
 
 			while (count <= 100) {
-					synchronized (lock) {
-						if (count % 2 == 0) {
-							System.out.println(Thread.currentThread().getName() + ":" + count);
-							count++;
-							lock.notify();
-						} else {
-							try {
-								lock.wait();
-							} catch (InterruptedException e) {
-								e.printStackTrace();
-							}
-
-
+				synchronized (lock) {
+					if (count % 2 == 0) {
+						System.out.println(Thread.currentThread().getName() + ":" + count);
+						count++;
+						lock.notify();
+					} else {
+						try {
+							lock.wait();
+						} catch (InterruptedException e) {
+							e.printStackTrace();
 						}
-
+					}
 				}
 
 			}
@@ -55,8 +52,6 @@ public class PrintInt {
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
-
-
 					}
 				}
 
