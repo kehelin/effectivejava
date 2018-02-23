@@ -16,7 +16,7 @@ public class ProducerComsumer {
     public void run() {
         for(int i = 0; i<10;i++ ) {
             new Thread( () ->{
-                queue.put
+//                queue.put
             },"Producer" + i).start();
         }
         }
