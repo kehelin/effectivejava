@@ -1,4 +1,4 @@
-package leetcode.backup;
+package leetcode;
 
 import leetcode.base.TreeNode;
 

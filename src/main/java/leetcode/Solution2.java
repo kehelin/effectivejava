@@ -1,4 +1,4 @@
-package leetcode.backup;
+package leetcode;
 
 /**
  * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
@@ -34,7 +34,7 @@ public class Solution2 {
         ListNode temp1 = l1;
         ListNode temp2 = l2;
         boolean addon = false;
-        ListNode first= null;
+        ListNode first = null;
         ListNode pre = null;
         while (temp1 != null || temp2 != null || addon) {
             int sum;
@@ -48,24 +48,24 @@ public class Solution2 {
             if (temp1 != null) {
                 num1 = temp1.val;
                 temp1 = temp1.next;
-            }else {
+            } else {
                 num1 = 0;
             }
             if (temp2 != null) {
                 num2 = temp2.val;
                 temp2 = temp2.next;
-            }else {
-                num2=0;
+            } else {
+                num2 = 0;
             }
 
             sum += num1 + num2;
             addon = sum >= 10;
 
-            if(first == null) {
-                first = new ListNode(sum%10);
+            if (first == null) {
+                first = new ListNode(sum % 10);
                 pre = first;
             } else {
-                pre.next = new ListNode(sum%10);
+                pre.next = new ListNode(sum % 10);
                 pre = pre.next;
             }
 

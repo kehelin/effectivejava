@@ -1,10 +1,10 @@
-package leetcode.backup;
+package leetcode;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class Solution136 {
-    public int singlenumber( int[] nums) {
+    public int singlenumber(int[] nums) {
         Set set = new HashSet();
         for (int i = 0; i < nums.length; i++) {
             if (set.contains(nums[i])) {
@@ -13,6 +13,6 @@ public class Solution136 {
                 set.add(nums[i]);
             }
         }
-        return (Integer)(set.toArray()[0]);
+        return (Integer) (set.toArray()[0]);
     }
 }

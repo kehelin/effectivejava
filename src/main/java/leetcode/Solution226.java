@@ -1,10 +1,10 @@
-package leetcode.backup;
+package leetcode;
 
 import leetcode.base.TreeNode;
 
 public class Solution226 {
     public TreeNode invertTree(TreeNode root) {
-        if(root ==null) {
+        if (root == null) {
             return null;
         }
         TreeNode temp = invertTree(root.left);
