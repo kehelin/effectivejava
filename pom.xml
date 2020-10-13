@@ -12,7 +12,7 @@
         <io.netty.version>4.1.42.Final</io.netty.version>
         <jedis.version>RELEASE</jedis.version>
         <guava.version>RELEASE</guava.version>
-        <junit.version>RELEASE</junit.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
