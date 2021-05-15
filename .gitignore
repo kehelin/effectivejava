@@ -1,3 +1,6 @@
 .idea/
 target/
-effectivejava.iml
+.idea
+*.iws
+*.iml
+*.ipr
